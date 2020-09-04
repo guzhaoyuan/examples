@@ -1,4 +1,11 @@
-local_repository(
+workspace(name = "stage4")
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
+git_repository(
     name = "stage3",
-    path = "../stage3",
+    remote = "https://github.com/guzhaoyuan/examples.git",
+    branch = "master",
+    strip_prefix = "cpp-tutorial/stage3",
 )
