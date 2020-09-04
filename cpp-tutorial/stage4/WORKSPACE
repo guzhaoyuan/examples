@@ -1,0 +1,4 @@
+local_repository(
+    name = "stage3",
+    path = "../stage3",
+)
